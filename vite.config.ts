@@ -11,6 +11,18 @@ export default defineConfig(({ mode }) => ({
     hmr: {
       overlay: false,
     },
+    proxy: {
+      "/api/n8n": {
+        target: "https://adityajadhav107.app.n8n.cloud",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/n8n/, "/webhook"),
+      },
+      "/api/n8n-test": {
+        target: "https://adityajadhav107.app.n8n.cloud",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/n8n-test/, "/webhook-test"),
+      },
+    },
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {

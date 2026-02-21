@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PricingCard from "@/components/PricingCard";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.svg";
 
 const steps = [
   { icon: Upload, title: "Upload Image", desc: "Drag & drop or select your image" },

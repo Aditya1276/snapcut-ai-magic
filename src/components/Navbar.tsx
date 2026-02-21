@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.svg";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
@@ -11,6 +11,7 @@ const Navbar = () => {
   const links = [
     { to: "/", label: "Home" },
     { to: "/editor", label: "Editor" },
+    { to: "/history", label: "History" },
     { to: "/pricing", label: "Pricing" },
     { to: "/dashboard", label: "Dashboard" },
   ];

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Navbar from "@/components/Navbar";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.svg";
 
 const Login = () => {
   const [email, setEmail] = useState("");

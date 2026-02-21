@@ -1,11 +1,13 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { User, CreditCard, Zap } from "lucide-react";
+import { getCredits } from "@/services/credits";
 
 const Dashboard = () => {
-  // TODO: Wire up real user data from auth
-  const user = { email: "user@example.com", plan: "Free", credits: 5 };
+  const [credits] = useState(getCredits);
+  const user = { email: "user@example.com", plan: "Free", credits };
 
   return (
     <div className="min-h-screen bg-background">
